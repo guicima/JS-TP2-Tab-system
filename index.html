@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tab system</title>
+
+    <style>
+        * {
+            font-family: sans-serif;
+            background-color: rgb(219, 219, 219);
+        }
+        .card {
+            margin: 20px;
+        }
+        .content p{
+            transition: 1s;
+            margin: 0;
+            display: inline-block;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .content p.active {
+            display: inline;
+            opacity: 1;
+            height: auto;
+            width: auto;
+        }
+        .content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 0 3px 3px 3px;
+            border: 1px solid rgb(190, 190, 190);
+            z-index: 1;
+            transform: translateY(-1px);
+        }
+        .tab {
+            padding: 10px 15px;
+            background-color: lightgray;
+            border-radius: 3px 3px 0 0;
+            cursor: pointer;
+            border: 1px solid rgb(190, 190, 190);
+            border-bottom: none;
+        }
+        .tab.active {
+            background-color: #fff;
+            cursor:default;
+            z-index: 2;
+        }
+        .nav {
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <nav class="nav">
+            <div class="tab active">Home</div>
+            <div class="tab">Profile</div>
+            <div class="tab">Messages</div>
+            <div class="tab">Settings</div>
+        </nav>
+        <div class="content">
+            <p class="active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in molestiae optio fuga quisquam inventore laboriosam fugiat amet odio error, tenetur id, totam corporis aut assumenda voluptates, nam aperiam ad.</p>
+
+            <p>Autem, dolor corporis laudantium sit voluptatum, molestias minus consequuntur voluptatibus eum voluptates debitis veritatis repudiandae qui cupiditate ut velit amet provident praesentium eligendi dolore tempore accusantium impedit aperiam? Eius, et!</p>
+
+            <p>Hic odit fuga voluptatum dolore qui amet magnam odio! Tenetur iusto quaerat consectetur aspernatur corrupti temporibus provident harum doloremque facere, explicabo quas? Deleniti consectetur unde enim nesciunt! Dolorem, labore mollitia.</p>
+
+            <p>Consequuntur, vitae. Minus asperiores voluptatibus cumque possimus dolorem iste doloribus est optio numquam minima tenetur aperiam, ipsa cupiditate sint, nobis voluptas vero nihil voluptates ut! Ratione ex mollitia corporis ipsam.</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
